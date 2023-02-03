@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="26964" started-at="2023-02-02T22:37:49 CET" finished-at="2023-02-02T22:38:16 CET">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="26964" started-at="2023-02-02T22:37:49 CET" finished-at="2023-02-02T22:38:16 CET">
+      <class name="com.assignment.testautomation.TestBasicFuntionality">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.assignment.testautomation.TestBasicFuntionality@86be70a]" name="beforeTest" is-config="true" duration-ms="8381" started-at="2023-02-02T22:37:49 CET" finished-at="2023-02-02T22:37:58 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="searchForAJobMatchingGivenCriteria()[pri:1, instance:com.assignment.testautomation.TestBasicFuntionality@86be70a]" name="searchForAJobMatchingGivenCriteria" duration-ms="16568" started-at="2023-02-02T22:37:58 CET" description="Unlogged customer is able to search for a job" finished-at="2023-02-02T22:38:14 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchForAJobMatchingGivenCriteria -->
+        <test-method status="PASS" signature="customerIsNotifiedWhenNoOffersMatchGivenCriteria()[pri:2, instance:com.assignment.testautomation.TestBasicFuntionality@86be70a]" name="customerIsNotifiedWhenNoOffersMatchGivenCriteria" duration-ms="1674" started-at="2023-02-02T22:38:14 CET" description="Customer is notified when no offers match given criteria" finished-at="2023-02-02T22:38:16 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customerIsNotifiedWhenNoOffersMatchGivenCriteria -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.assignment.testautomation.TestBasicFuntionality@86be70a]" name="afterTest" is-config="true" duration-ms="291" started-at="2023-02-02T22:38:16 CET" finished-at="2023-02-02T22:38:16 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.assignment.testautomation.TestBasicFuntionality -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
