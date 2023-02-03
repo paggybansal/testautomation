@@ -15,23 +15,30 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Actions {
 	
 WebDriver driver;
-WebDriverWait wait;
+static WebDriverWait wait;
 	
 	public Actions(WebDriver driver) {
 		this.driver = driver;
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
+	
+	public static WebElement explicitWait(WebElement element)
+	{
+		
+		return wait.until(ExpectedConditions.visibilityOf(element));
+	}
 
 	public void click(WebElement element) {
-		element.click();
+		explicitWait(element).click();
 	}
 	
 	public void enterText(WebElement inputfield, String value) {
-		inputfield.sendKeys(value);
+			explicitWait(inputfield).sendKeys(value);	
 	}
 	
 	public String getText(WebElement inputfield) {
-		return inputfield.getText();
+		
+		return explicitWait(inputfield).getText();
 	}
 	
 	public void navigateTo(String url) {
@@ -47,14 +54,13 @@ WebDriverWait wait;
 	public void selectOptionWithText(WebElement ul, String textToSelect)  {
 		try
 		{
-			wait.until(ExpectedConditions.visibilityOf(ul));
-			Thread.sleep(5000);
+			explicitWait(ul);
+			Thread.sleep(2000);
 			List<WebElement> optionsToSelect = ul.findElements(By.tagName("li"));
 			for(WebElement option : optionsToSelect){
 		        if(option.getText().equals(textToSelect)) {
 		        	System.out.println("Trying to select: "+textToSelect);
-		        	//wait.until(ExpectedConditions.visibilityOf(option)).click();;
-		            option.click();
+		        	explicitWait(option).click();
 		            break;
 		        }
 		    }}
